@@ -1,7 +1,7 @@
 {
   "manifestVersion": 1,
-  "id": "plugin_template",
-  "name": "Plugin Template",
+  "id": "table-of-contents",
+  "name": "Table of Contents Plugin",
   "author": "remnote",
   "repoUrl": "https://github.com/d3lta0ne/remnote_plugins/tree/main/table-of-contents",
   "version": {
