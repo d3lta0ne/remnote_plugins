@@ -23,6 +23,11 @@ function RightSidebar2() {
     []
   );
 
+  // Clear History function
+  const clearHistory = () => {
+    setRemData([]);
+  };
+
   const closeIndex = (index: number) => {
     remData.splice(index, 1);
     setRemData(remData);
@@ -51,6 +56,11 @@ function RightSidebar2() {
       className="h-full overflow-y-auto rn-clr-background-primary"
       onMouseDown={(e) => e.stopPropagation()}
     >
+    <div className="flex justify-end p-2">
+      <button className="px-3 py-1 text-gray-700 bg-gray-200 rounded-md" onClick={clearHistory}>
+        Clear History
+      </button>
+    </div>
       {remData.length == 0 && (
         <div className="rn-clr-content-primary">
           Navigate to other documents to automatically record history.
