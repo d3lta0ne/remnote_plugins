@@ -4,7 +4,7 @@
   "trailingComma": "es5",
   "printWidth": 100,
   "tabWidth": 4,
-  "semi": false,
+  "semi": true,
   "bracketSpacing":true,
   "bracketSameLine": true,
   "arrowParens": "always",
