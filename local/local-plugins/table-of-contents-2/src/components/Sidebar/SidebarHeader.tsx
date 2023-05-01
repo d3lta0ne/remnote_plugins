@@ -4,7 +4,6 @@ import SidebarIcon from '../../assets/svg/icon-sidebar.svg';
 
 function SidebarTab(props) {
     const isSelected = props.selectedTab === props.tabName;
-    const leftPosition = isSelected ? `${props.tabPosition}px` : 0;
   
     return (
       <button
@@ -12,9 +11,8 @@ function SidebarTab(props) {
           isSelected ? 'dark:rn-clr-background-elevation-50' : ''
         }`}
         onClick={() => props.onTabClick(props.tabName)}
-        // style={{ left: leftPosition }}
       >
-        {props.tabName}
+        <span>{props.tabName}</span>
       </button>
     );
   }
@@ -32,7 +30,7 @@ function SidebarHeader(props) {
                 boxShadow: 'rgba(65, 65, 85, 0.06) 0px 1px 4px, rgba(65, 65, 85, 0.1) 0px 0px 0px 0.5px inset'                }}
             >
             {/* Tab Header Selection Box */}
-            <mark className='absolute rounded-lg h-7 bg-gray-15 dark:rn-clr-background-elevation-50'
+            <mark className='absolute rounded-lg h-7 bg-gray-15 dark:rn-clr-background-elevation-5'
               style={{
                   transition: 'left 150ms ease 0s',
                   width: '50%',
@@ -41,7 +39,7 @@ function SidebarHeader(props) {
               }}/>
             
             {/* Tab Headers */}
-              <ul className='flex w-full list-none'>
+              <menu className='flex w-full list-none'>
                   <SidebarTab
                     tabName="Table of Contents"
                     selectedTab={props.selectedTab}
@@ -54,7 +52,7 @@ function SidebarHeader(props) {
                     tabPosition={tabPositions['History']}
                     onTabClick={props.tabSelection}
                   />
-              </ul>
+              </menu>
         </nav>
 
         {/* Settings Button */}
