@@ -14,7 +14,6 @@ function Sidebar() {
 	  };
 	
 	return (
-        // Sidebar
         <aside className='container flex flex-col w-full h-full'>
             {/* Sidebar Header */}
 			<SidebarHeader selectedTab={selectedTab} tabSelection={handleTabClick} />

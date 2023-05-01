@@ -76,10 +76,10 @@ function TableOfContents() {
 	});
 
 	return (
-		// Table of Contents
 		<nav className='flex flex-col flex-1 px-4 py-2 overflow-hidden'>
 			{/* Table of Contents Header */}
 			<TableOfContentsHeader/>
+			
 			{/* Table of Content Items */}
 			{/* <TableOfContentsItems/> */}
 

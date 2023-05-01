@@ -55,7 +55,7 @@ function SidebarHeader(props) {
               }}/>
             
             {/* Tab Headers */}
-              <menu className='flex w-full list-none'>
+              <menu className='inline-flex w-full list-none'>
                   <SidebarTab
                     tabName="Table of Contents"
                     selectedTab={props.selectedTab}
