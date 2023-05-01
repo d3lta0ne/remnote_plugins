@@ -4,13 +4,7 @@ import {
 	usePlugin,
 	renderWidget,
 	useTracker,
-	SelectionType,
-	WidgetLocation,
-	useRunAsync,
-	RemViewer,
-	Rem,
 	RemId,
-	RichTextInterface,
 	RNPlugin,
 	LoadingSpinner,
 } from '@remnote/plugin-sdk';
@@ -106,7 +100,7 @@ function renderTableOfContents() {
 							</h1>
 						</header>
 						<ol className='flex-col items-center list-decimal justify-evenly'>
-							{headers?.map((item) => renderTableOfContentItems(item, openRem))}
+							<TableOfContents headers={headers} openRem={openRem} />
 						</ol>
 					</nav>
 				) : (
@@ -121,18 +115,6 @@ function renderTableOfContents() {
 	);
 }
 
-// Incorporate w/ History and just make a TOC of the most recent history item, add a back button and forward button
-interface TOCItem {
-	id: string;
-	remId: RemId;
-	label: string;
-	level: number;
-	open: boolean;
-	parentId?: RemId;
-	numbering: string;
-	prefix: string;
-	children?: TOCItem[]; // new children property
-}
 
 // TOCItem Component
 // TODO: Display items of the same parent but different "heading levels"  differently (i.e. h1 vs h3 when they aren't nested and h3 is above the h1 but they are in the same document)
