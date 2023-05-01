@@ -2,6 +2,15 @@ import React, { useState } from 'react';
 import SidebarIcon from '../../assets/svg/icon-sidebar.svg';
 
 
+/**
+ * Renders a single tab in the Sidebar header
+ * @param {Object} props - Properties passed to the component
+ * @param {string} props.tabName - The name of the tab
+ * @param {string} props.selectedTab - The currently selected tab
+ * @param {number} props.tabPosition - The position of the tab in the header
+ * @param {Function} props.onTabClick - Function to handle clicking on a tab
+ * @returns {JSX.Element} - Returns JSX to render a single tab
+ */
 function SidebarTab(props) {
     const isSelected = props.selectedTab === props.tabName;
   
@@ -18,6 +27,13 @@ function SidebarTab(props) {
   }
 
 
+/**
+ * Renders the header section of the Sidebar
+ * @param {Object} props - Properties passed to the component
+ * @param {string} props.selectedTab - The currently selected tab
+ * @param {Function} props.tabSelection - Function to handle selecting a tab
+ * @returns {JSX.Element} - Returns JSX to render the header section of the Sidebar
+ */
 function SidebarHeader(props) {
     // TODO: Turn into a table to make dynamic
     const tabPositions = { 'Table of Contents': 0, History: 126 };
