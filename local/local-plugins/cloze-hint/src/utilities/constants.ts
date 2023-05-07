@@ -1,5 +1,17 @@
-export const clozeHintsPowerupCode = "closeHints"
-export const hintsSlotCode = "hints"
-export const hintsStorageKey = "hintsKey"
-export const taggedRemStorageKey = 'taggedRemStorageKey'
-export const clozePropsStorageKey = 'inputProps'
+/** @format */
+
+export const global = {
+    author: "deltaone",
+  }; 
+
+export const cloze = {
+    powerupCode: "closeHints",
+        slots: {
+            hintsSlotCode: "hints",
+            hintsStorageKey: "hintsKey",
+        },
+    taggedRemStorageKey: 'taggedRemStorageKey',
+    clozePropsStorageKey: 'inputProps'
+};
+  
+  export default global;

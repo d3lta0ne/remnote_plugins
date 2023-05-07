@@ -71,7 +71,6 @@ export default function TableOfContents() {
 	  
 		return tempHeaders;
 	}
-	
 	const focusedRem = useTracker(async (reactivePlugin) => await reactivePlugin.focus.getFocusedRem());
 
 	const headers = useTracker(async (reactivePlugin) => await findAndProcessHeaders(reactivePlugin, focusedRem?._id), [focusedRem]);
