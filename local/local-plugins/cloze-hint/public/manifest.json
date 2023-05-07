@@ -1,0 +1,22 @@
+{
+	"manifestVersion": 1,
+	"id": "cloze-hints-upgrade",
+	"name": "Cloze Hints",
+	"author": "d3lta0ne",
+	"repoUrl": "https://github.com/d3lta0ne/remnote_plugins",
+	"version": {
+		"major": 1,
+		"minor": 0,
+		"patch": 0
+	},
+	"theme": [],
+	"enableOnMobile": false,
+	"description": "Cloze Hints",
+	"requestNative": false,
+	"requiredScopes": [
+		{
+			"type": "All",
+			"level": "Read"
+		}
+	]
+}
