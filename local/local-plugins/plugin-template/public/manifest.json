@@ -1,17 +1,17 @@
 {
 	"manifestVersion": 1,
-	"id": "plugin_template",
-	"name": "Plugin Template",
-	"author": "remnote",
-	"repoUrl": "",
+	"id": "new_pluging_template",
+	"name": "New Plugin Template",
+	"author": "d3lta0ne",
+	"repoUrl": "https://github.com/d3lta0ne/remnote_plugins",
 	"version": {
-		"major": 0,
+		"major": 1,
 		"minor": 0,
-		"patch": 1
+		"patch": 0
 	},
 	"theme": [],
 	"enableOnMobile": false,
-	"description": "",
+	"description": "New Remnote Plugin",
 	"requestNative": false,
 	"requiredScopes": [
 		{
