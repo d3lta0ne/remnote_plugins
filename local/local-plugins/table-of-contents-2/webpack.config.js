@@ -36,6 +36,16 @@ const config = {
   module: {
     rules: [
       {
+        test: /\.(js|jsx|ts|tsx)$/,
+        exclude: /node_modules/,
+        use: {
+          loader: 'babel-loader',
+          options: {
+            cacheDirectory: true,
+          },
+        },
+      },
+      {
         test: /\.(ts|tsx|jsx|js)?$/,
         loader: "esbuild-loader",
         options: {

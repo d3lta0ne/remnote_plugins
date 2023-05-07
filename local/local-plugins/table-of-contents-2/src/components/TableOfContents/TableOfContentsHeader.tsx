@@ -1,24 +1,26 @@
 /** @format */
 
 import React from 'react';
+import { memo} from 'react';
 import { ITableOfContentsItems } from '../../types/ITableOfContentsItems';
 import NumberIcon from "../../assets/svg/icon-hashtag.svg";
 import CopyIcon from "../../assets/svg/icon-copy.svg"
+import { Rem } from '@remnote/plugin-sdk';
 
-function TableOfContentsHeader(props) {
+const TableOfContentsHeader = memo(function TableOfContentsHeader({ focusRem } : { focusRem: Rem | undefined}) {
 	return (
-        <header className='flex items-center justify-between p-1 font-medium leading-6 rn-clr-content-secondary dark:rn-clr-content-primary'>
-            {/* Number Sign */}
-            <NumberIcon/>
+        <header className='flex items-center justify-between p-1 rn-leading-base align-center rn-fontsize-medium rn-clr-content-secondary dark:rn-clr-content-primary'>
+            {/* Number Sign
+            <NumberIcon/> */}
             {/* Table of Content Column */}
             <span>
                 Table of Contents
             </span>
             {/* Copy Button */}
-            <button className='inline-flex items-center self-end justify-center gap-1 border-2 rounded-md rn-clr-border-accent rn-button--primary'>
+            {/* TODO: Fix button and hover events --- make button div represent a bigger space / give a border line too */}
+            <button className='inline-flex items-center self-end justify-center h-full gap-1 align-middle rn-button--primary hover:rn-clr-background--hovered rn-text-label-small button rn-clr-border-accent'>
                 {/* Copy Icon */}
                 <CopyIcon/>
-                {/* <div style={{`display: flex; align-items: center; padding-right: 4px`}}></div> */}
                 {/* Copy Text */}
                 <span className='w-max'>
                     Copy
@@ -26,6 +28,6 @@ function TableOfContentsHeader(props) {
             </button>
         </header>
 		);
-}
+});
 
 export default TableOfContentsHeader;

@@ -1,6 +1,6 @@
 /** @format */
 
-import React, { useEffect } from 'react';
+import React, { StrictMode, useEffect } from 'react';
 import {
 	RemHierarchyEditorTree,
 	RemId,
@@ -15,7 +15,9 @@ import Sidebar from "../components/Sidebar/Sidebar";
 
 function SidebarWidget() {
 	return (
-		<Sidebar/>
+		<StrictMode>
+			<Sidebar/>
+		</StrictMode>
     );
 }
 
