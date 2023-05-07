@@ -2,12 +2,12 @@
 	"manifestVersion": 1,
 	"id": "link-parser",
 	"name": "Link Parser + Rem Creator",
-	"author": "jamesjoyce",
-	"repoUrl": "",
+	"author": "d3lta0ne",
+	"repoUrl": "https://github.com/d3lta0ne/remnote_plugins",
 	"version": {
-		"major": 0,
+		"major": 1,
 		"minor": 0,
-		"patch": 1
+		"patch": 0
 	},
 	"theme": [],
 	"enableOnMobile": false,
