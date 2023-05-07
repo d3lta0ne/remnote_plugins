@@ -5,6 +5,7 @@ import '../style.css'
 import '../App.css'
 
 async function onActivate(plugin: ReactRNPlugin) {
+
 	// Register settings
 	await plugin.settings.registerStringSetting({
 		id: 'name',
@@ -36,8 +37,8 @@ async function onActivate(plugin: ReactRNPlugin) {
 	// Show a toast notification to the user.
 	await plugin.app.toast("I'm a toast!")
 
-	// Register a sidebar widget.
-	await plugin.app.registerWidget('sample_widget', WidgetLocation.RightSidebar, {
+	// Register a widget.
+	await plugin.app.registerWidget('widget', WidgetLocation.RightSidebar, {
 		dimensions: { height: 'auto', width: '100%' },
 	})
 }

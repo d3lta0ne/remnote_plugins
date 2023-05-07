@@ -2,7 +2,7 @@
 
 import { usePlugin, renderWidget, useTracker } from '@remnote/plugin-sdk'
 
-export const SampleWidget = () => {
+export const Widget = () => {
 	const plugin = usePlugin()
 
 	let name = useTracker(() => plugin.settings.getSetting<string>('name'))
@@ -20,4 +20,4 @@ export const SampleWidget = () => {
 	)
 }
 
-renderWidget(SampleWidget)
+renderWidget(Widget)
